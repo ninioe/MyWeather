@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-9">
+    <div class="input-container">
+      <input type="text" class="form-control" (input)="onSearchCity()" #s>
+
+      <ul class="list-group" *ngIf="showPopup">
+        <li class="list-group-item list-group-item-action" *ngFor="let city of cities" (click)="onSelectCity(city)">
+          {{city.name}}, {{city.country}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <button type="button" class="btn btn-default" (click)="onSearchClick()">Search</button>
+  </div>
+</div>
